@@ -3,20 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Cid Pinheiro Farias | Psicologia</title>
 
 <style>
+:root {
+  --bg: #f4f4f4;
+  --card: #ffffff;
+  --text-main: #222222;
+  --text-muted: #666666;
+  --accent: #444444;
+  --button: #1a1a1a;
+  --button-hover: #333333;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  text-align: center;
-  padding: 40px 12px;
-  color: #222;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
 }
 
 .container {
   max-width: 420px;
-  margin: 0 auto;
+  margin: 60px auto;
+  padding: 32px 24px;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
 h1 {
@@ -26,55 +42,76 @@ h1 {
 
 .crp {
   font-size: 14px;
-  color: #555;
-  margin-bottom: 18px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
 }
 
-p {
-  margin: 4px 0;
-  color: #444;
+.description {
   font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 28px;
 }
 
-a {
+a.button {
   display: block;
-  margin: 14px auto;
+  width: 100%;
   padding: 14px;
-  background: #000000;
+  margin-bottom: 14px;
+  background: var(--button);
   color: #ffffff;
   text-decoration: none;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 500;
+  transition: background 0.2s ease;
 }
 
-a:hover {
-  opacity: 0.9;
+a.button:hover {
+  background: var(--button-hover);
+}
+
+.footer {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 24px;
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
   <h1>Cid Pinheiro Farias</h1>
   <div class="crp">Psicólogo | CRP 07/44893</div>
 
-  <p>Psicoterapia Analítico-Comportamental</p>
-  <p>Professor | Me. Ciências da Saúde</p>
+  <div class="description">
+    Psicoterapia Analítico-Comportamental<br>
+    Professor | Me. Ciências da Saúde
+  </div>
 
-  <a href="https://wa.me/5553991053796?text=Olá%2C%20gostaria%20de%20informações%20sobre%20atendimento%20psicológico." target="_blank">
+  <a class="button" href="https://wa.me/5553991053796?text=Olá%2C%20gostaria%20de%20informações%20sobre%20atendimento%20psicológico." target="_blank">
     Agendar consulta (WhatsApp)
   </a>
 
-  <a href="https://open.spotify.com/show/03I8afdx9f1b62Tb0SnsAK" target="_blank">
+  <a class="button" href="https://open.spotify.com/show/03I8afdx9f1b62Tb0SnsAK" target="_blank">
     🎧 Podcast Entre Estímulos
   </a>
 
-  <a href="https://www.instagram.com/cidpinheiropsi/" target="_blank">
+  <a class="button" href="https://lattes.cnpq.br/5072857995301252" target="_blank">
+    Currículo Lattes
+  </a>
+
+  <a class="button" href="https://www.instagram.com/cidpinheiropsi/" target="_blank">
     Instagram profissional
   </a>
 
+  <div class="footer">
+    Atendimento psicológico online e presencial
+  </div>
+
 </div>
+
 </body>
 </html>
