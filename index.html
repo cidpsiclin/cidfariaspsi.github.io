@@ -116,7 +116,7 @@ a.button {
 
 a.button:hover { background: var(--button-hover); }
 
-/* DELAYS DESKTOP (somente botões) */
+/* DELAYS DESKTOP */
 a.button:nth-of-type(1) { animation-delay: 0.25s; }
 a.button:nth-of-type(2) { animation-delay: 0.35s; }
 a.button:nth-of-type(3) { animation-delay: 0.45s; }
@@ -134,7 +134,7 @@ details.about-details {
   background: rgba(0,0,0,0.015);
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 12px;
-  padding: 14px 14px;
+  padding: 14px;
 }
 
 summary.about-summary {
@@ -160,6 +160,16 @@ summary.about-summary::-webkit-details-marker { display: none; }
   color: var(--text-muted);
 }
 
+/* troca texto abrir/fechar */
+details[open] .about-hint {
+  font-size: 0;
+}
+details[open] .about-hint::after {
+  content: "Toque para fechar";
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
 .chev {
   width: 28px;
   height: 28px;
@@ -172,10 +182,8 @@ summary.about-summary::-webkit-details-marker { display: none; }
   transition: transform 0.25s ease;
 }
 
-/* seta gira ao abrir */
 details[open] .chev { transform: rotate(180deg); }
 
-/* conteúdo com transição sutil */
 .about-content {
   margin-top: 12px;
   padding-top: 12px;
@@ -196,7 +204,7 @@ details[open] .chev { transform: rotate(180deg); }
 }
 .about-content p:last-child { margin-bottom: 0; }
 
-/* RODAPÉ ÉTICO */
+/* RODAPÉ */
 .footer {
   font-size: 12.5px;
   color: var(--text-muted);
@@ -209,7 +217,7 @@ details[open] .chev { transform: rotate(180deg); }
 @keyframes fadeIn { to { opacity: 1; } }
 @keyframes buttonIn { to { opacity: 1; transform: translateY(0); } }
 
-/* MOBILE — DELAY MENOR (somente botões) */
+/* MOBILE — DELAY MENOR */
 @media (max-width: 480px) {
   a.button:nth-of-type(1) { animation-delay: 0.15s; }
   a.button:nth-of-type(2) { animation-delay: 0.22s; }
@@ -218,7 +226,7 @@ details[open] .chev { transform: rotate(180deg); }
   .scroll-indicator { font-size: 18px; }
 }
 
-/* Acessibilidade: reduz movimento */
+/* ACESSIBILIDADE */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
