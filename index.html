@@ -91,6 +91,7 @@ h1 {
   opacity: 0.6;
   animation: arrowFloat 2.8s ease-in-out infinite;
 }
+
 @keyframes arrowFloat {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(4px); }
@@ -114,13 +115,16 @@ a.button {
   animation: buttonIn 0.5s ease forwards;
 }
 
-a.button:hover { background: var(--button-hover); }
+a.button:hover {
+  background: var(--button-hover);
+}
 
 /* DELAYS DESKTOP */
 a.button:nth-of-type(1) { animation-delay: 0.25s; }
 a.button:nth-of-type(2) { animation-delay: 0.35s; }
 a.button:nth-of-type(3) { animation-delay: 0.45s; }
 a.button:nth-of-type(4) { animation-delay: 0.55s; }
+a.button:nth-of-type(5) { animation-delay: 0.65s; }
 
 /* ACORDEÃO */
 .about {
@@ -147,7 +151,9 @@ summary.about-summary {
   user-select: none;
 }
 
-summary.about-summary::-webkit-details-marker { display: none; }
+summary.about-summary::-webkit-details-marker {
+  display: none;
+}
 
 .about-title {
   font-size: 15px;
@@ -164,6 +170,7 @@ summary.about-summary::-webkit-details-marker { display: none; }
 details[open] .about-hint {
   font-size: 0;
 }
+
 details[open] .about-hint::after {
   content: "Toque para fechar";
   font-size: 12.5px;
@@ -182,7 +189,9 @@ details[open] .about-hint::after {
   transition: transform 0.25s ease;
 }
 
-details[open] .chev { transform: rotate(180deg); }
+details[open] .chev {
+  transform: rotate(180deg);
+}
 
 .about-content {
   margin-top: 12px;
@@ -202,7 +211,10 @@ details[open] .chev { transform: rotate(180deg); }
   line-height: 1.65;
   color: var(--text-muted);
 }
-.about-content p:last-child { margin-bottom: 0; }
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
 
 /* RODAPÉ */
 .footer {
@@ -214,21 +226,33 @@ details[open] .chev { transform: rotate(180deg); }
 }
 
 /* ANIMAÇÕES */
-@keyframes fadeIn { to { opacity: 1; } }
-@keyframes buttonIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
 
-/* MOBILE — DELAY MENOR */
+@keyframes buttonIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
 @media (max-width: 480px) {
   a.button:nth-of-type(1) { animation-delay: 0.15s; }
   a.button:nth-of-type(2) { animation-delay: 0.22s; }
   a.button:nth-of-type(3) { animation-delay: 0.29s; }
   a.button:nth-of-type(4) { animation-delay: 0.36s; }
-  .scroll-indicator { font-size: 18px; }
+  a.button:nth-of-type(5) { animation-delay: 0.43s; }
+
+  .scroll-indicator {
+    font-size: 18px;
+  }
 }
 
 /* ACESSIBILIDADE */
 @media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 </style>
 </head>
@@ -268,6 +292,10 @@ details[open] .chev { transform: rotate(180deg); }
     Instagram profissional
   </a>
 
+  <a class="button" href="mailto:cidpsiclin@gmail.com?subject=Contato%20profissional">
+    Enviar e-mail
+  </a>
+
   <div class="about">
     <details class="about-details">
       <summary class="about-summary">
@@ -281,18 +309,19 @@ details[open] .chev { transform: rotate(180deg); }
       <div class="about-content">
         <p>Sou psicólogo clínico e professor universitário. Atuo em Pelotas (RS) e sou natural de Rio Grande. Ao longo da minha trajetória, venho conciliando a prática clínica com o ensino e a pesquisa, o que influencia diretamente a forma como penso e conduzo o trabalho terapêutico.</p>
 
-        <p>Atualmente, sou professor do curso de Psicologia da Faculdade Anhanguera de Pelotas, onde leciono disciplinas como Psicopatologia, Diagnóstico e Intervenção em Psicologia, Neuroanatomofisiologia, Behaviorismo, Análise Experimental do Comportamento, Métodos de Avaliação Psicológica e Métodos Quantitativos. Essa experiência mantém meu trabalho clínico sempre atento ao rigor técnico, à reflexão crítica e à ética profissional.</p>
+        <p>Atualmente, sou professor do curso de Psicologia da Faculdade Anhanguera de Pelotas, onde leciono disciplinas como Psicopatologia, Diagnóstico e Intervenção em Psicologia, Neuroanatomofisiologia, Behaviorismo, Análise Experimental do Comportamento, Métodos de Avaliação Psicológica e Métodos Quantitativos.</p>
 
-        <p>Trabalho com a Psicoterapia Analítico-Comportamental, uma abordagem que busca compreender como padrões de comportamento, pensamento e emoção se constroem ao longo da vida e se mantêm nas situações do cotidiano. Em terapia, o foco não é rotular, mas entender o funcionamento desses padrões e ampliar possibilidades de escolha, ação e cuidado.</p>
+        <p>Trabalho com a Psicoterapia Analítico-Comportamental, uma abordagem que busca compreender como padrões de comportamento, pensamento e emoção se constroem ao longo da vida e se mantêm nas situações do cotidiano.</p>
 
-        <p>O processo terapêutico é construído em conjunto, com escuta, clareza e objetivos definidos. A psicoterapia é um espaço para compreender o sofrimento, desenvolver novos repertórios e construir formas de viver mais coerentes com aquilo que é importante para cada pessoa.</p>
+        <p>O processo terapêutico é construído em conjunto, com escuta, clareza e objetivos definidos, visando ampliar possibilidades de ação, escolha e cuidado.</p>
       </div>
     </details>
   </div>
 
   <div class="footer">
     Atendimento psicológico • Sigilo profissional garantido<br>
-    Conforme Código de Ética do Psicólogo (CFP)
+    Conforme Código de Ética do Psicólogo (CFP)<br>
+    Contato: cidpsiclin@gmail.com
   </div>
 
 </div>
