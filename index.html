@@ -3,20 +3,246 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Cid Pinheiro Farias | Psicologia</title>
+
+<style>
+:root {
+  --bg: #F4F4F4;
+  --card: #FFFFFF;
+  --text-main: #444444;
+  --text-muted: #6A6A6A;
+  --accent: #9DAF75;
+  --button: #444444;
+  --button-hover: #2f2f2f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 520px;
+  margin: 70px auto;
+  padding: 42px 36px;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+/* FOTO */
+.photo {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  filter: grayscale(100%) contrast(0.95);
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXTO */
+h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.crp {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 auto 18px;
+  border-radius: 2px;
+}
+
+/* SETA */
+.scroll-indicator {
+  font-size: 20px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+  opacity: 0.6;
+  animation: arrowFloat 2.8s ease-in-out infinite;
+}
+
+@keyframes arrowFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(4px); }
+  100% { transform: translateY(0); }
+}
+
+/* BOTÕES */
+a.button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  background: var(--button);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: buttonIn 0.5s ease forwards;
+}
+
+a.button:hover {
+  background: var(--button-hover);
+}
+
+/* DELAYS */
+a.button:nth-of-type(1) { animation-delay: 0.25s; }
+a.button:nth-of-type(2) { animation-delay: 0.35s; }
+a.button:nth-of-type(3) { animation-delay: 0.45s; }
+a.button:nth-of-type(4) { animation-delay: 0.55s; }
+a.button:nth-of-type(5) { animation-delay: 0.65s; }
+
+/* ACORDEÃO */
+.about {
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+details.about-details {
+  background: rgba(0,0,0,0.015);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+summary.about-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.about-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.about-hint {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+details[open] .about-hint {
+  font-size: 0;
+}
+
+details[open] .about-hint::after {
+  content: "Toque para fechar";
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.about-content {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* RODAPÉ */
+.footer {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 24px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes buttonIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
 
-<body style="font-family: Arial, sans-serif; background:#f4f4f4; padding:40px; text-align:center">
+<body>
 
-<h1>Cid Pinheiro Farias</h1>
-<p>Psicólogo | CRP 07/44893</p>
+<div class="container">
 
-<p>
-<a href="https://wa.me/5553991053796" target="_blank">Agendar consulta</a><br><br>
-<a href="https://open.spotify.com/show/03I8afdx9f1b62Tb0SnsAK" target="_blank">Podcast Entre Estímulos</a><br><br>
-<a href="https://lattes.cnpq.br/5072857995301252" target="_blank">Currículo Lattes</a><br><br>
-<a href="https://www.instagram.com/cidpinheiropsi/" target="_blank">Instagram profissional</a>
-</p>
+  <div class="photo">
+    <img src="assets/foto.jpg" alt="Cid Pinheiro Farias">
+  </div>
+
+  <h1>Cid Pinheiro Farias</h1>
+  <div class="crp">Psicólogo | CRP 07/44893</div>
+
+  <div class="description">
+    Psicoterapia Analítico-Comportamental<br>
+    Professor | Me. Ciências da Saúde
+  </div>
+
+  <div class="divider"></div>
+  <div class="scroll-indicator">↓</div>
+
+  <a class="button" href="https://wa.me/5553991053796" target="_blank">Agendar consulta</a>
+  <a class="button" href="https://open.spotify.com/show/03I8afdx9f1b62Tb0SnsAK" target="_blank">Podcast Entre Estímulos</a>
+  <a class="button" href="https://lattes.cnpq.br/5072857995301252" target="_blank">Currículo Lattes</a>
+  <a class="button" href="https://www.instagram.com/cidpinheiropsi/" target="_blank">Instagram profissional</a>
+  <a class="button" href="mailto:cidpsiclin@gmail.com">Enviar e-mail</a>
+
+  <div class="about">
+    <details class="about-details">
+      <summary class="about-summary">
+        <div>
+          <div class="about-title">Quem sou e como trabalho</div>
+          <div class="about-hint">Toque para abrir</div>
+        </div>
+      </summary>
+      <div class="about-content">
+        <p>Sou psicólogo clínico e professor universitário. Atuo em Pelotas (RS) e concilio prática clínica, ensino e pesquisa.</p>
+        <p>Trabalho com Psicoterapia Analítico-Comportamental, focada em ampliar possibilidades de ação, escolha e cuidado.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="footer">
+    Atendimento psicológico • Sigilo profissional garantido<br>
+    Código de Ética do Psicólogo (CFP)
+  </div>
+
+</div>
 
 </body>
 </html>
