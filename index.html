@@ -119,12 +119,15 @@ a.button:hover {
   background: var(--button-hover);
 }
 
-/* DELAYS DESKTOP */
-a.button:nth-of-type(1) { animation-delay: 0.25s; }
-a.button:nth-of-type(2) { animation-delay: 0.35s; }
-a.button:nth-of-type(3) { animation-delay: 0.45s; }
-a.button:nth-of-type(4) { animation-delay: 0.55s; }
-a.button:nth-of-type(5) { animation-delay: 0.65s; }
+/* DELAYS */
+a.button:nth-of-type(1) { animation-delay: 0.20s; }
+a.button:nth-of-type(2) { animation-delay: 0.30s; }
+a.button:nth-of-type(3) { animation-delay: 0.40s; }
+a.button:nth-of-type(4) { animation-delay: 0.50s; }
+a.button:nth-of-type(5) { animation-delay: 0.60s; }
+a.button:nth-of-type(6) { animation-delay: 0.70s; }
+a.button:nth-of-type(7) { animation-delay: 0.80s; }
+a.button:nth-of-type(8) { animation-delay: 0.90s; }
 
 /* ACORDEÃO */
 .about {
@@ -212,10 +215,6 @@ details[open] .chev {
   color: var(--text-muted);
 }
 
-.about-content p:last-child {
-  margin-bottom: 0;
-}
-
 /* RODAPÉ */
 .footer {
   font-size: 12.5px;
@@ -226,33 +225,12 @@ details[open] .chev {
 }
 
 /* ANIMAÇÕES */
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-@keyframes buttonIn {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* MOBILE */
-@media (max-width: 480px) {
-  a.button:nth-of-type(1) { animation-delay: 0.15s; }
-  a.button:nth-of-type(2) { animation-delay: 0.22s; }
-  a.button:nth-of-type(3) { animation-delay: 0.29s; }
-  a.button:nth-of-type(4) { animation-delay: 0.36s; }
-  a.button:nth-of-type(5) { animation-delay: 0.43s; }
-
-  .scroll-indicator {
-    font-size: 18px;
-  }
-}
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes buttonIn { to { opacity: 1; transform: translateY(0); } }
 
 /* ACESSIBILIDADE */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
+  * { animation: none !important; transition: none !important; }
 }
 </style>
 </head>
@@ -276,12 +254,26 @@ details[open] .chev {
   <div class="divider"></div>
   <div class="scroll-indicator">↓</div>
 
+  <!-- LINKS PRINCIPAIS -->
   <a class="button" href="https://wa.me/5553991053796?text=Olá%2C%20gostaria%20de%20informações%20sobre%20atendimento%20psicológico." target="_blank">
     Agendar consulta
   </a>
 
   <a class="button" href="https://open.spotify.com/show/03I8afdx9f1b62Tb0SnsAK" target="_blank">
     Podcast Entre Estímulos
+  </a>
+
+  <!-- CONTEÚDO -->
+  <a class="button" href="https://github.com/cidpsiclin/psiccidpinheiro/tree/main/textos" target="_blank">
+    Textos
+  </a>
+
+  <a class="button" href="https://github.com/cidpsiclin/psiccidpinheiro/tree/main/livros" target="_blank">
+    Livros
+  </a>
+
+  <a class="button" href="https://github.com/cidpsiclin/psiccidpinheiro/tree/main/imagens" target="_blank">
+    Imagens
   </a>
 
   <a class="button" href="https://lattes.cnpq.br/5072857995301252" target="_blank">
@@ -307,13 +299,8 @@ details[open] .chev {
       </summary>
 
       <div class="about-content">
-        <p>Sou psicólogo clínico e professor universitário. Atuo em Pelotas (RS) e sou natural de Rio Grande. Ao longo da minha trajetória, venho conciliando a prática clínica com o ensino e a pesquisa, o que influencia diretamente a forma como penso e conduzo o trabalho terapêutico.</p>
-
-        <p>Atualmente, sou professor do curso de Psicologia da Faculdade Anhanguera de Pelotas, onde leciono disciplinas como Psicopatologia, Diagnóstico e Intervenção em Psicologia, Neuroanatomofisiologia, Behaviorismo, Análise Experimental do Comportamento, Métodos de Avaliação Psicológica e Métodos Quantitativos.</p>
-
-        <p>Trabalho com a Psicoterapia Analítico-Comportamental, uma abordagem que busca compreender como padrões de comportamento, pensamento e emoção se constroem ao longo da vida e se mantêm nas situações do cotidiano.</p>
-
-        <p>O processo terapêutico é construído em conjunto, com escuta, clareza e objetivos definidos, visando ampliar possibilidades de ação, escolha e cuidado.</p>
+        <p>Sou psicólogo clínico e professor universitário. Atuo em Pelotas (RS) e sou natural de Rio Grande.</p>
+        <p>Trabalho com Psicoterapia Analítico-Comportamental, com escuta clínica, clareza conceitual e compromisso ético.</p>
       </div>
     </details>
   </div>
